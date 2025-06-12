@@ -1,12 +1,10 @@
-from pathlib import Path
-
 # CAN Interface Configuration
 CAN_INTERFACE = 'socketcan'  # or 'virtual', 'kvaser', etc.
 CAN_CHANNEL = 'vcan0'        # or 'can0', 'can1', etc.
 
 # DBC Configuration
 DBC_FILE_PATHS = [
-    "ttc_io_30xh_d65.dbc"
+    "d65_brightloops.dbc"
 ]
 
 # Logging Configuration
