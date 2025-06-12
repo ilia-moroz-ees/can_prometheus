@@ -1,2 +1,5 @@
 /venv/
 /Prometheus_app/
+/__pycache__/
+parseCANedge.py
+ttc_io_30xh_d65.dbc
