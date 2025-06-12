@@ -12,3 +12,5 @@ DBC_FILE_PATHS = [
 # Logging Configuration
 LOG_LEVEL = 'INFO'
 LOG_FORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+
+SERVER_PORT = 8000

@@ -2,6 +2,7 @@ import logging
 from config import *
 from CANReader import CANReader
 from DBCDecoder import DBCDecoder
+from prometheusClient import PrometheusClient
 
 def setup_logging():
     logging.basicConfig(
@@ -12,6 +13,7 @@ def setup_logging():
 def main():
     setup_logging()
     logger = logging.getLogger('main')
+    client = PrometheusClient()
 
     # Initialize DBC decoder
     dbc_decoder = None
@@ -35,6 +37,7 @@ def main():
     while True:
         try:
             message = can_reader.read_decoded_message()
+            client.send_message(message)
 
         except KeyboardInterrupt: # Shutting down properly
             break
